@@ -6,7 +6,7 @@ A conversational AI agent that delivers instant competitive intelligence on any 
 
 ## Demo
 
-> 📹 *Add a screen recording or GIF here showing a search for "keytruda" returning the analysis*
+> demo.gif
 
 ---
 
