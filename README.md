@@ -1,12 +1,12 @@
-# **FDA Competitive Intelligence Agent**
+FDA Competitive Intelligence Agent
 A conversational AI agent that delivers instant competitive intelligence on any FDA-approved drug or pharmaceutical sponsor. Built with the Anthropic Claude API and a custom MCP (Model Context Protocol) server that connects directly to the OpenFDA database, the agent autonomously queries FDA drug approval records, adverse event reports, and clinical trial submissions — then reasons across all three data sources to generate a structured competitive analysis brief.
 
-# **Demo**
+Demo
 
-Demo.gif
+📹 Add a screen recording or GIF here showing a search for "keytruda" returning the four-section analysis
 
 
-# **Use Case**
+Use Case
 Pharmaceutical competitive intelligence typically requires analysts to manually cross-reference multiple FDA databases — a time-consuming process that can take hours per drug. This agent automates that workflow end-to-end. Type in any drug name (e.g. keytruda, nivolumab) or sponsor name (e.g. Merck, Pfizer Inc.) and within seconds receive a structured brief covering:
 
 Approval Overview — what has been approved, when, and under which application numbers
@@ -15,7 +15,7 @@ Safety Profile — top adverse events by report volume from the FDA FAERS databa
 Competitive Takeaways — AI-synthesized strategic observations for competitive positioning
 
 
-# **Architecture**
+Architecture
 Browser (HTML/CSS/JS)
         │
         ▼
@@ -31,7 +31,7 @@ Custom OpenFDA MCP Server
         ├── /drug/clinicaltrials → Clinical study results
         └── /drug/event        → Adverse event reports
 
-# **Tech Stack**
+Tech Stack
 
 AI Model — Anthropic Claude (claude-sonnet-4-6)
 Agent Framework — Anthropic Python SDK with tool use
@@ -41,7 +41,7 @@ Backend — Flask (Python)
 Frontend — HTML, CSS, JavaScript (single file, no framework)
 
 
-# **Project Structure**
+Project Structure
 clinical-trials-agent/
 ├── app.py                 # Flask backend + web UI
 ├── ct_mcp_server.py       # Custom OpenFDA MCP server
@@ -50,13 +50,13 @@ clinical-trials-agent/
 ├── .gitignore
 └── README.md
 
-# **Setup & Installation**
+Setup & Installation
 Prerequisites
 
 Python 3.8+
 An Anthropic API key (console.anthropic.com)
 
-# **Steps**
+Steps
 1 — Clone the repository
 bashgit clone https://github.com/mmanjula12/clinical-trial-agent.git
 cd clinical-trial-agent
@@ -77,10 +77,10 @@ bashpython app.py
 6 — Open in browser
 http://127.0.0.1:5000
 
-# **Example Queries**
+Example Queries
 QueryWhat it returnskeytrudaMerck's PD-1 inhibitor approvals, safety profile, competitive positionnivolumabBristol-Myers Squibb Opdivo approval history and trial insightsPfizer Inc.Full portfolio overview across all Pfizer FDA approvalsMerckMerck sponsor-level competitive intelligence brief
 
-# **How the Agent Works**
+How the Agent Works
 
 User enters a drug name or sponsor in the browser
 Flask backend receives the query and passes it to Claude
@@ -90,7 +90,7 @@ Claude reasons across all returned data and generates a four-section intelligenc
 The brief is rendered in the browser as a formatted report
 
 
-# **Notes**
+Notes
 
 OpenFDA is a free public API — no API key required
 The only credential needed is an Anthropic API key stored in .env
@@ -98,5 +98,5 @@ The .env file is excluded from Git via .gitignore — never commit your API key
 Analysis typically completes in 30–60 seconds depending on data volume
 
 
-# **Author**
+Author
 Built by @mmanjula12 as part of a series of AI agent projects exploring the Anthropic Claude API and MCP server architecture.
