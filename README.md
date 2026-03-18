@@ -6,7 +6,7 @@ A conversational AI agent that delivers instant competitive intelligence on any 
 
 ## Demo
 
-> demo.gif
+> ([FDA Demo](https://github.com/mmanjula12/fda-competitive-intelligence-agent/blob/master/demo.gif))
 
 ---
 
